@@ -1,0 +1,7 @@
+{
+  // Exam rule: only traditional autocomplete (language server, e.g. rust-analyzer).
+  // Every AI feature must stay off.
+  "disable_ai": true,
+  "edit_predictions": { "provider": "none" },
+  "agent": { "enabled": false }
+}
