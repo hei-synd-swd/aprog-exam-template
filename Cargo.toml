@@ -1,0 +1,25 @@
+[package]
+name = "exam"
+version = "0.1.0"
+edition = "2024"
+
+# For a sixth exercise, copy a block and change both names.
+[[bin]]
+name = "ex1"
+path = "ex1.rs"
+
+[[bin]]
+name = "ex2"
+path = "ex2.rs"
+
+[[bin]]
+name = "ex3"
+path = "ex3.rs"
+
+[[bin]]
+name = "ex4"
+path = "ex4.rs"
+
+[[bin]]
+name = "ex5"
+path = "ex5.rs"

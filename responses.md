@@ -8,7 +8,7 @@
 
 > Fill in only what the exam paper asks for. Leave the rest empty.
 > Do not rename or remove the headings.
-> Code files go in the folder `exN/` (see `README.md`).
+> Code goes in `exN.rs` (see `README.md`).
 
 ---
 

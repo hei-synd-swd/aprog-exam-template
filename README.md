@@ -48,11 +48,12 @@ Allowed only if the supervisor agreed beforehand, with all AI plugins removed or
 .
 |- README.md          these rules (do not edit)
 |- responses.md       your written answers
-|- ex1/ ... ex5/      your code and other files, one folder per exercise
+|- ex1.rs ... ex5.rs  your code, one program per exercise
+|- Cargo.toml         makes each exN.rs a program (do not edit, except for a sixth exercise)
 `- .zed/settings.json editor settings (do not edit)
 ```
 
-Answer in `responses.md` when the exercise asks for text, an explanation, a trace, an output or a table. Put code in the folder of the exercise when the exercise asks you to write or run code.
+Answer in `responses.md` when the exercise asks for text, an explanation, a trace, an output or a table. Put code in `exN.rs` when the exercise asks you to write or run code.
 
 You do not need to fill in everything. Only the parts that the exam paper asks for. Leave the rest of the sections empty.
 
@@ -76,17 +77,15 @@ If the exam paper does not name a file, use these names. If it does, the exam pa
 
 | What | Where |
 |------|-------|
-| Code of exercise `N` (one program) | `exN/main.rs` |
-| Separate code per part | `exN/a.rs`, `exN/b.rs`, ... (the letter of the part) |
-| Rust project (only if asked) | `exN/` as a cargo project (`cargo new` inside `exN/`) |
-| Diagram source (PlantUML) | `exN/diagram.puml` |
-| Other files | `exN/` with a short, lowercase name, no spaces |
+| Code of exercise `N` | `exN.rs` |
+| Separate code per part | in `exN.rs`, one function per part (`fn part_a()`, `fn part_b()`, ...), called from `main` |
+| Diagram source (PlantUML) | `exN.puml` |
+| Other files | `exN-<name>.<ext>`, short, lowercase, no spaces (for example `ex4-trace.txt`) |
 
 Rules for the files:
 
-- One folder per exercise (create `ex6/` if the exam has a sixth). Never put exercise files at the top level.
+- One code file per exercise. Do not create other `.rs` files: the editor only knows the files listed in `Cargo.toml`, so a new file gets no autocomplete. If the exam has a sixth exercise, create `ex6.rs` and add an `ex6` block to `Cargo.toml` (copy the `ex5` block).
 - Your code must compile. A part that does not compile gets few points. If you cannot finish it, comment the broken part out and say so in `responses.md`.
-- Compile with `rustc exN/main.rs -o /tmp/exN` or `cargo run`, and format with `rustfmt`.
 - Comment your code so that its purpose and structure are clear.
 - Do not commit build output (`target/`, binaries). `.gitignore` covers the usual ones.
 
